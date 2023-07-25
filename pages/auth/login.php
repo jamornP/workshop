@@ -11,7 +11,7 @@
 <body class="font-kanit">
   <?php //require $_SERVER['DOCUMENT_ROOT'] . "/workshop/components/navbar.php"; ?>
 
-  <div class="container" style="margin-top: 10%;">
+  <div class="container mt-3">
     <div class="card" style="max-width: 50%;margin: 0px auto;">
       <div class="card-header">
         <h5>
@@ -43,7 +43,7 @@
                 <button type="button" class="btn btn-link btn-floating mx-1">
                   <i class="fab fa-facebook-f"></i>
                 </button> 
-                
+
               <button type="button" class="btn btn-link btn-floating mx-1">
                 <i class="fab fa-google"></i>
               </button>
