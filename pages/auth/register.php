@@ -15,7 +15,7 @@
     <div class="card" style="max-width: 50%;margin: 0px auto;">
       <div class="card-header">
         <h5>
-          Register (กรุณาระบุข้อมูลเป็น ภาษาไทย)
+          Register (กรุณาระบุข้อมูลชื่อเป็น ภาษาไทย)
         </h5>
       </div>
       <div class="card-body" style="margin: 0px 10%;">
@@ -69,7 +69,7 @@
             </div>
 
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-block mb-4">สมัครสมาชิก</button>
+            <button type="submit" class="btn btn-primary btn-block mb-4" name="add">สมัครสมาชิก</button>
 
             <!-- Register buttons -->
             <div class="text-center">
