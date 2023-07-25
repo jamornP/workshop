@@ -42,8 +42,8 @@
               <!-- <p>or sign up with:</p>
                 <button type="button" class="btn btn-link btn-floating mx-1">
                   <i class="fab fa-facebook-f"></i>
-                </button> -->
-
+                </button> 
+                
               <button type="button" class="btn btn-link btn-floating mx-1">
                 <i class="fab fa-google"></i>
               </button>
@@ -54,7 +54,7 @@
 
               <button type="button" class="btn btn-link btn-floating mx-1">
                 <i class="fab fa-github"></i>
-              </button>
+              </button> -->
             </div>
           </form>
         </div>
