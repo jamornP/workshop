@@ -16,7 +16,7 @@ if (isset($_POST['add'])) {
   $ck = $authObj->addUser($data);
   if ($ck) {
     echo "<script language='javascript'> alert('ลงทะเบียนสำเร็จ') </script>";
-    header('Location: http://www.example.com/');
+    header('Location: login.php');
     exit;
   } else {
     echo "<script language='javascript'> alert('อีเมลล์นี้ ได้ลงทะเบียนแล้ว') </script>";
