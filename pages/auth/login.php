@@ -20,43 +20,43 @@
       </div>
       <div class="card-body" style="margin: 0px 10%;">
         <div class="row">
-            <form action="" method="POST">
-              <!-- Email input -->
-              <div class="form-outline mb-4">
-                <input type="email" id="email" class="form-control" />
-                <label class="form-label" for="email">Email address</label>
-              </div>
+          <form action="check.php" method="POST">
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="email">Email address</label>
+              <input type="email" id="email" name="email" class="form-control" />
+            </div>
 
-              <!-- Password input -->
-              <div class="form-outline mb-4">
-                <input type="password" id="password" class="form-control" />
-                <label class="form-label" for="password">Password</label>
-              </div>
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="password">Password</label>
+              <input type="password" id="password" name="password" class="form-control" />
+            </div>
 
-              <!-- Submit button -->
-              <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
 
-              <!-- Register buttons -->
-              <div class="text-center">
-                <p>Not a member? <a href="register.php">Register</a></p>
-                <!-- <p>or sign up with:</p>
+            <!-- Register buttons -->
+            <div class="text-center">
+              <p>Not a member? <a href="register.php">Register</a></p>
+              <!-- <p>or sign up with:</p>
                 <button type="button" class="btn btn-link btn-floating mx-1">
                   <i class="fab fa-facebook-f"></i>
                 </button> -->
 
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-google"></i>
-                </button>
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-google"></i>
+              </button>
 
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-twitter"></i>
-                </button>
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-twitter"></i>
+              </button>
 
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-github"></i>
-                </button>
-              </div>
-            </form>
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-github"></i>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
