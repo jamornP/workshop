@@ -12,7 +12,7 @@ $dataObj = new Data;
 ?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-298">
   <div class="container">
-    <a class="navbar-brand" href="https://www.science.kmitl.ac.th/new">
+    <a class="navbar-brand" href="/workshop/pages">
       <img src="/workshop/images/logo-white.png" alt="Logo" style="display:table; margin: 0 auto; max-width:200px;">
     </a>
 
