@@ -25,5 +25,53 @@ class Auth extends DbWorkshop {
             return false;
         }
     }
+    public function addUser($user){
+        $ckEmail = $this->checkEmail($user['email']);
+        if($ckEmail){
+            return false;
+        }else{
+            $user['password'] = password_hash($user['password'],PASSWORD_DEFAULT);
+
+            $sql = "
+            INSERT INTO tb_users (
+                ti_id,
+                s_name,
+                s_surname,
+                s_school,
+                s_tel,
+                s_email,
+                s_password
+                
+            ) VALUES (
+                :ti_id,
+                :s_name,
+                :s_surname,
+                :s_school,
+                :s_tel,
+                :s_email,
+                :s_password
+            )
+            ";
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute($user);
+            return true;
+        }
+        
+    }
+    public function checkEmail($email) {
+        $sql = "
+            SELECT *
+            FROM tb_student
+            WHERE s_email='{$email}'
+        ";
+        $stmt = $this->pdo->query($sql);
+        $data = $stmt->fetchAll();
+        $count = count($data);
+        if($count>0){
+            return true;
+        }else{
+            return false;
+        }
+    }
 
 }

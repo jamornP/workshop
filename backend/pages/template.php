@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Backend</title>
     <!-- -------- -->
-    <?php require $_SERVER['DOCUMENT_ROOT'] . "/template/backend/components/link.php"; ?>
+    <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/backend/components/link.php"; ?>
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -15,8 +15,8 @@
             <img class="animation__shake" src="" alt="AdminLTELogo" height="60" width="60">
         </div>
         <!-- ----- -->
-        <?php require $_SERVER['DOCUMENT_ROOT'] . "/template/backend/components/menu_left.php"; ?>
-        <?php require $_SERVER['DOCUMENT_ROOT'] . "/template/backend/components/navbar.php"; ?>
+        <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/backend/components/menu_left.php"; ?>
+        <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/backend/components/navbar.php"; ?>
        
         <div class="content-wrapper">
             <div class="content-header">
@@ -47,8 +47,8 @@
        
     </div>
     <!-- ---------  -->
-    <?php require $_SERVER['DOCUMENT_ROOT'] . "/template/backend/components/footer.php"; ?>
-    <?php require $_SERVER['DOCUMENT_ROOT'] . "/template/backend/components/script.php"; ?>
+    <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/backend/components/footer.php"; ?>
+    <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/backend/components/script.php"; ?>
 </body>
 
 </html>
