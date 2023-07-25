@@ -19,6 +19,7 @@ if (isset($_POST['add'])) {
     header('Location: login.php');
     exit;
   } else {
+    
     echo "<script language='javascript'> alert('อีเมลล์นี้ ได้ลงทะเบียนแล้ว') </script>";
   }
 }
