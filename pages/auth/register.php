@@ -65,13 +65,13 @@
             <!-- School input -->
             <div class="form-outline mb-2">
               <label class="form-label" for="school">สถานศึกษา :</label>
-              <input type="text" id="school" name="school" class="form-control" required/>
+              <input type="text" id="school" name="school" class="form-control" />
             </div>
 
             <!-- Telephone input -->
             <div class="form-outline mb-2">
               <label class="form-label" for="tel">เบอร์โทรศัพท์ :</label>
-              <input type="text" id="tel" name="tel" class="form-control" required/>
+              <input type="text" id="tel" name="tel" class="form-control" />
             </div>
 
             <!-- Submit button -->

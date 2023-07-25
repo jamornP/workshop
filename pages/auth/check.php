@@ -17,10 +17,24 @@ if (isset($_POST['add'])) {
   if ($ck) {
     echo "<script language='javascript'> alert('ลงทะเบียนสำเร็จ') </script>";
     header('Location: login.php');
-    exit;
+    exit();
   } else {
-    
     echo "<script language='javascript'> alert('อีเมลล์นี้ ได้ลงทะเบียนแล้ว') </script>";
+    header('Location: register.php');
+    exit();
   }
+}
+if(isset($_POST['check'])){
+    $data['s_email'] = $_POST['email'];
+    $data['s_password'] = $_POST['password'];
+    $ck = $authObj->checkUser($data);
+    if($ck){
+        echo "<script language='javascript'> alert('ลงทะเบียนสำเร็จ') </script>";
+        header('Location: /workshop/pages/index.php');
+        exit();
+    }else{
+        header('Location: login.php');
+        exit();
+    }
 }
 ?>
