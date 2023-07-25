@@ -25,7 +25,30 @@
 
         <div class="mt-3">
             <div class="row">
-                <div class="col-lg-4">
+                <?php
+                    $workshops = $dataObj->getWorkshop("data");
+                    // print_r($workshops);
+                    foreach($workshops as $w){
+                        echo "
+                        <div class='col-lg-4'>
+                            <img src='/workshop/images/{$w['w_img']}' class='img-thumbnail'>
+                            <div class='row mt-1'>
+                                <div class='col-lg-6'>
+                                    <p>{$w['w_detail']}</p>
+                                    <a href='{$w['w_link']}'>***
+                                        คลิกลงทะเบียน ***</a>
+                                    
+                                </div>
+                                <div class='col-lg-6'>
+                                    <img src='/workshop/images/qr/{$w['w_qrcode']}' class='img-thumbnail qropen'>
+                                    <p class='text-center'>QR Code Open chat</p>
+                                </div>
+                            </div>
+                        </div>
+                        ";
+                    }
+                ?>
+                <!-- <div class="col-lg-4">
                     <img src="/workshop/images/b1.png" class="img-thumbnail">
                     <div class="row mt-1">
                         <div class="col-lg-6">
@@ -69,7 +92,7 @@
                             <p class="text-center">QR Code Open chat</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
