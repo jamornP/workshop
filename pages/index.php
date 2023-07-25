@@ -12,12 +12,12 @@
     <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/components/navbar.php"; ?>
 
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mt-3">
+        <div class="row mt-3">
+            <div class="col-lg-9 mt-3">
                 <h2>สแกนเพื่อลงทะเบียนรับใบประกาศนียบัตร เมื่อเข้าร่วมกิจกรรม Workshop</h2>
-                <h4>"โปรดเก็บรูป QR Code ประจำตัวไว้เพื่อแสดงให้เจ้าหน้าที่แสกนข้อมูลก่อนเข้าห้อง Workshop"</h4>
+                <h4 class="font-sriracha text-white fs-20">"โปรดเก็บรูป QR Code ประจำตัวไว้เพื่อแสดงให้เจ้าหน้าที่แสกนข้อมูลก่อนเข้าห้อง Workshop"</h4>
             </div>
-            <div class="col-lg-4" style="text-align: center;">
+            <div class="col-lg-3" style="text-align: center;">
                 <img src="/workshop/images/qr/qrm.png"><br>
                 <a href="#">หรือคลิกลิ้งค์</a>
             </div>
