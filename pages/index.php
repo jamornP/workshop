@@ -8,7 +8,7 @@
     <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/components/link.php"; ?>
 </head>
 
-<body class="font-kanit">
+<body class="font-kanit bg-242">
     <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/components/navbar.php"; ?>
 
     <div class="container">
