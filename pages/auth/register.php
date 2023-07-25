@@ -23,8 +23,14 @@
           <form action="check.php" method="POST">
             <!-- Email input -->
             <div class="form-outline mb-4">
-              <label class="form-label" for="email">Email address</label>
+              <label class="form-label" for="email">Email</label>
               <input type="email" id="email" class="form-control" name="email" required />
+            </div>
+
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <label class="form-label" for="password">Password</label>
+              <input type="password" id="password" class="form-control" name="password" required/>
             </div>
 
             <!-- Title input -->
@@ -60,12 +66,6 @@
             <div class="form-outline mb-4">
               <label class="form-label" for="tel">เบอร์โทรศัพท์</label>
               <input type="text" id="tel" name="tel" class="form-control" required/>
-            </div>
-
-            <!-- Password input -->
-            <div class="form-outline mb-4">
-              <label class="form-label" for="password">Password</label>
-              <input type="password" id="password" class="form-control" name="password" required/>
             </div>
 
             <!-- Submit button -->
