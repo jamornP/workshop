@@ -1,7 +1,7 @@
 <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/vendor/autoload.php"; ?>
 <?php 
 use App\Model\Auth;
-$dataObj = new Auth;
+$authObj = new Auth;
 print_r($_POST);
 if(isset($_POST['add'])){
     $data['s_email'] = $_POST['email'];
@@ -12,9 +12,9 @@ if(isset($_POST['add'])){
     $data['s_school'] = $_POST['school'];
     $data['s_tel'] = $_POST['tel'];
    print_r($data);
-   $ck = $dataObj->addUser($data);
+   $ck = $authObj->addUser($data);
    if($ck){
-    echo "<script language='javascript'>alert(message successfully sent)</script>";
+    echo "<script language='javascript'> alert('message successfully sent') </script>";
    }
 }
 ?>

@@ -1,3 +1,11 @@
+<?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/vendor/autoload.php"; ?>
+<?php 
+use App\Model\Auth;
+$authObj = new Auth;
+use App\Model\Data;
+$dataObj = new Data;
+
+?>
 <nav class="navbar navbar-expand-lg navbar-dark bg-123">
   <div class="container">
     <a class="navbar-brand" href="#">

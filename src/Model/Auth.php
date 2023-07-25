@@ -26,14 +26,14 @@ class Auth extends DbWorkshop {
         }
     }
     public function addUser($user){
-        $ckEmail = $this->checkEmail($user['email']);
+        $ckEmail = $this->checkEmail($user['s_email']);
         if($ckEmail){
             return false;
         }else{
-            $user['password'] = password_hash($user['password'],PASSWORD_DEFAULT);
+            $user['s_password'] = password_hash($user['s_password'],PASSWORD_DEFAULT);
 
             $sql = "
-            INSERT INTO tb_users (
+            INSERT INTO tb_student (
                 ti_id,
                 s_name,
                 s_surname,

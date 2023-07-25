@@ -7,7 +7,7 @@ class DbWorkshop{
     private $host = "localhost";
 	private $user = "root";
 	private $password = "";
-	private $dbName = "science_workshop";
+	private $dbName = "db_workshop";
 	protected $pdo;
 
 	function __construct() {
