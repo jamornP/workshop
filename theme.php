@@ -13,7 +13,7 @@
 
 
 
-
+  
   <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/components/script.php"; ?>
 </body>
 
