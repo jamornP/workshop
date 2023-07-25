@@ -2,7 +2,7 @@
 namespace App\Model;
 use App\Database\DbWorkshop;
 class Auth extends DbWorkshop {
-    public function checkUserGoogle($email,$img) {
+    public function checkUser($email,$img) {
         $sql = "
             SELECT *,p.p_name as position
             FROM tb_member as m 
