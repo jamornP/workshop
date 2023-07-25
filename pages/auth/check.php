@@ -6,7 +6,7 @@ print_r($_POST);
 if(isset($_POST['add'])){
     $data['s_email'] = $_POST['email'];
     $data['s_password'] = $_POST['password'];
-    $data['ti_id'] = $_POST['email'];
+    $data['ti_id'] = $_POST['ti_id'];
     $data['s_name'] = $_POST['name'];
     $data['s_surname'] = $_POST['surname'];
     $data['s_school'] = $_POST['school'];
