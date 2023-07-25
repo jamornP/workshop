@@ -2,27 +2,36 @@
 namespace App\Model;
 use App\Database\DbWorkshop;
 class Auth extends DbWorkshop {
-    public function checkUser($email,$img) {
+    public function checkUser($user) {
         $sql = "
-            SELECT *,p.p_name as position
-            FROM tb_member as m 
-            LEFT JOIN tb_staff as st ON st.email = m.email
-            LEFT JOIN tb_position as p ON p.p_id = st.p_id 
-            WHERE m.email ='{$email}'
+            SELECT
+                s.*,t.ti_name as title
+            FROM
+                tb_student as s
+            LEFT JOIN tb_title as t ON t.ti_id = s.ti_id
+            WHERE
+                s.s_email = ?
         ";
-        $stmt = $this->pdo->query($sql);
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute([$user['s_email']]);
         $data = $stmt->fetchAll();
-        if(count($data)>0){
+        $userDB = $data[0];
+        if(password_verify($user['s_password'],$userDB['s_password'])) {
             session_start();
-            $_SESSION['login_parttime'] = true;
-            $_SESSION['fullname']=$data[0]['title'].$data[0]['name']." ".$data[0]['surname'];
-            $_SESSION['id']=$data[0]['id'];
-            $_SESSION['email']=$data[0]['email'];
-            $_SESSION['img']=$img;
-            $_SESSION['role']=$data[0]['role'];
-            return true;
-        }else{
-            return false;
+            $_SESSION['s_id'] = $userDB['s_id'];
+            $_SESSION['name'] = $userDB['s_name'];
+            $_SESSION['surname'] = $userDB['s_surname'];
+            $_SESSION['email'] = $userDB['s_email'];
+            $_SESSION['tel'] = $userDB['s_tel'];
+            $_SESSION['role'] = $userDB['role'];
+            $_SESSION['login'] = true;
+            $_SESSION['fullname'] = $userDB['title'].$userDB['name']." ".$userDB['surname'];
+            $dataUser['role'] = $userDB['role'];
+
+            return $dataUser;
+        } else {
+            $dataUser['login'] = false;
+            return $dataUser;
         }
     }
     public function addUser($user){

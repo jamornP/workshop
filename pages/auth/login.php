@@ -11,8 +11,8 @@
 <body class="font-kanit">
   <?php //require $_SERVER['DOCUMENT_ROOT'] . "/workshop/components/navbar.php"; ?>
 
-  <div class="container mt-3">
-    <div class="card" style="max-width: 50%;margin: 0px auto;">
+  <div class="container vh-100">
+    <div class="card mt-10" style="max-width: 50%;margin: 0px auto;">
       <div class="card-header">
         <h5>
           Log in
@@ -34,7 +34,7 @@
             </div>
 
             <!-- Submit button -->
-            <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+            <button type="submit" class="btn btn-primary btn-block mb-4" name="check">Sign in</button>
 
             <!-- Register buttons -->
             <div class="text-center">
