@@ -27,7 +27,7 @@ $dataObj = new Data;
           <?php
        
           if (isset($_SESSION['login']) and $_SESSION['login']) {
-            if($_SESSION['role']==""){
+            if($_SESSION['role']=="student"){
               echo "
                 <li class='nav-item'>
                   <a class='nav-link ' aria-current='page' href='/workshop/pages/student'>QR Code</a>
