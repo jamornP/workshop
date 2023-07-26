@@ -23,6 +23,9 @@ $dataObj = new Data;
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/workshop/pages/index.php">Home</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/workshop/pages/wdata.php">ข้อมูลกิจกรรม</a>
+          </li>
           
           <?php
        
