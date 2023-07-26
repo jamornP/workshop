@@ -1,3 +1,14 @@
+<?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/vendor/autoload.php"; ?>
+<?php
+use App\Model\Auth;
+
+$authObj = new Auth;
+
+use App\Model\Data;
+
+$dataObj = new Data;
+
+?>
  <nav class="main-header navbar navbar-expand navbar-white navbar-dark" style="background-color: darkblue;">
      
      <ul class="navbar-nav">

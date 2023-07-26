@@ -11,10 +11,9 @@
 
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
-        <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="" alt="AdminLTELogo" height="60" width="60">
-        </div>
+        
         <!-- ----- -->
+        <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/backend/components/load.php"; ?>
         <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/backend/components/menu_left.php"; ?>
         <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/backend/components/navbar.php"; ?>
        
@@ -36,7 +35,36 @@
             </div>
             <section class="content">
                 <div class="container-fluid">
-                   
+                   <?php 
+                        $datas = $dataObj->getMember("data");
+                        echo "<pre>";
+                        print_r($datas);
+                        echo"</pre>";
+                        // $i=0;
+                        // foreach($datas as $m){
+                        //     $i++;
+                        //     // echo $m['title']."<br>";
+                        //     $title = $dataObj->getIdTitle($m['title']);
+                        //     $data['s_email'] = $m['email'];
+                        //     $data['s_password'] = $m['password'];
+                        //     $data['ti_id'] = $title;
+                        //     $data['s_name'] = $m['firstname'];
+                        //     $data['s_surname'] = $m['lastname'];
+                        //     $data['s_school'] = $m['school'];
+                        //     $data['s_tel'] = $m['phone'];
+                        //     $data['role'] = "student";
+
+                            
+                        //     // $ckadd = $authObj->addUser2($data);
+                        //     // echo $i.". ".$ckadd."<br>";
+                        //     // print_r($data);
+                        //     // echo "<br>";
+                        //     // echo "<pre>";
+                        //     // print_r($data);
+                        //     // echo"</pre>";
+
+                        // }
+                   ?>
                 </div>
             </section>
            

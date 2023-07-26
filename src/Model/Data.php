@@ -27,5 +27,29 @@ class Data extends DbWorkshop {
         $data = $stmt->fetchAll();
         return $data;
     }
-
+    // Member
+    public function getMember($action){
+        $sql = "
+            SELECT *
+            FROM tb_student
+        ";
+        $stmt = $this->pdo->query($sql);
+        $data = $stmt->fetchAll();
+        if($action=="count"){
+            return count($data);
+        }else{
+            return $data;
+        }
+    }
+    // Title
+    public function getIdTitle($ti_name){
+        $sql = "
+            SELECT *
+            FROM tb_title
+            WHERE ti_name = '{$ti_name}'
+        ";
+        $stmt = $this->pdo->query($sql);
+        $data = $stmt->fetchAll();
+        return $data[0]['ti_id'];
+    }
 }
