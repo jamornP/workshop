@@ -9,58 +9,72 @@
 </head>
 
 <body class="font-kanit">
-  <?php //require $_SERVER['DOCUMENT_ROOT'] . "/workshop/components/navbar.php"; ?>
+  <?php //require $_SERVER['DOCUMENT_ROOT'] . "/workshop/components/navbar.php"; 
+  ?>
 
   <div class="container vh-100">
-    <div class="card mt-10" style="max-width: 50%;margin: 0px auto;">
+    <!-- <div class="card mt-10" style="max-width: 50%;margin: 0px auto;">
       <div class="card-header">
         <h5>
-          Log in
+          เข้าสู่ระบบ
         </h5>
       </div>
       <div class="card-body" style="margin: 0px 10%;">
         <div class="row">
+          
+        </div>
+        <div class="row mt-3">
           <form action="check.php" method="POST">
-            <!-- Email input -->
             <div class="form-outline mb-4">
-              <label class="form-label" for="email">Email address</label>
+              <label class="form-label" for="email">Email :</label>
               <input type="email" id="email" name="email" class="form-control" />
             </div>
-
-            <!-- Password input -->
             <div class="form-outline mb-4">
-              <label class="form-label" for="password">Password</label>
+              <label class="form-label" for="password">Password :</label>
               <input type="password" id="password" name="password" class="form-control" />
             </div>
 
-            <!-- Submit button -->
             <button type="submit" class="btn btn-primary btn-block mb-4" name="check">Sign in</button>
 
-            <!-- Register buttons -->
             <div class="text-center">
               <p>Not a member? <a href="register.php">Register</a></p>
-              <!-- <p>or sign up with:</p>
-                <button type="button" class="btn btn-link btn-floating mx-1">
-                  <i class="fab fa-facebook-f"></i>
-                </button> 
-
-              <button type="button" class="btn btn-link btn-floating mx-1">
-                <i class="fab fa-google"></i>
-              </button>
-
-              <button type="button" class="btn btn-link btn-floating mx-1">
-                <i class="fab fa-twitter"></i>
-              </button>
-
-              <button type="button" class="btn btn-link btn-floating mx-1">
-                <i class="fab fa-github"></i>
-              </button> -->
             </div>
           </form>
         </div>
       </div>
-    </div>
+    </div> -->
 
+
+    <div class="vh-100 d-flex justify-content-center align-items-center">
+      <div class="card mb-3">
+
+
+        <div class="card-header bg-primary text-white text-center">
+          <h4>เข้าสู่ระบบ Workshop</h4>
+        </div>
+        <div class="card-body">
+          <div class="mt-2">
+            <img src="/workshop/images/logo.png" alt="" style="display:table; margin: 0 auto; max-width:200px;">
+            <p class="text-center mt-2 text-success">เข้าสู่ระบบสร้าง QR Code</p>
+          </div>
+          <form action="check.php" class="mb-3" method="POST">
+            <div class="form-group mt-5">
+              <label for="email">Email :</label>
+              <input type="email" name="email" id="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Password :</label>
+              <input type="password" name="password" id="password" class="form-control" required>
+            </div>
+            <div class="text-end">
+              <button type="submit" class="btn btn-primary mt-2 text-white" name="check">Login</button>
+            </div>
+          </form>
+          <a href="register.php">ลงทะเบียน</a><BR>
+          <!-- <a href="resetPass.php">ลืมรหัสผ่าน</a> -->
+        </div>
+      </div>
+    </div>
   </div>
 
 

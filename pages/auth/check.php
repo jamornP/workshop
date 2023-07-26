@@ -15,6 +15,7 @@ if (isset($_POST['add'])) {
   print_r($data);
   $ck = $authObj->addUser($data);
   if ($ck) {
+   
     echo "<script language='javascript'> alert('ลงทะเบียนสำเร็จ') </script>";
     header('Location: login.php');
     exit();
@@ -28,11 +29,24 @@ if(isset($_POST['check'])){
     $data['s_email'] = $_POST['email'];
     $data['s_password'] = $_POST['password'];
     $ck = $authObj->checkUser($data);
-    if($ck){
-        echo "<script language='javascript'> alert('ลงทะเบียนสำเร็จ') </script>";
-        header('Location: /workshop/pages/index.php');
-        exit();
+    print_r($data);
+    if($ck['login']){
+        echo "<script language='javascript'> alert('ยินดีต้อนรับ {$_POST['email']}') </script>";
+        if(isset($_SESSION['role'])){
+          if($_SESSION['role']=="admin"){
+            header('Location: /workshop/backend/pages/index.php');
+            exit();
+          }elseif($_SESSION['role']=="staff"){
+            header('Location: /workshop/pages/staff/index.php');
+            exit();
+          }else{
+            header('Location: /workshop/pages/index.php');
+            exit();
+          }
+        }
+       
     }else{
+        echo "<script language='javascript'> alert('Email หรือ Password ไม่ถูกต้อง') </script>";
         header('Location: login.php');
         exit();
     }
