@@ -45,7 +45,9 @@ if(isset($_POST['check'])){
             exit();
           }
         }else{
-          echo "ไม่มี role";
+          echo "<script language='javascript'> alert('Email หรือ Password ไม่ถูกต้อง') </script>";
+          header('Location: login.php');
+        exit();
         }
        
     }else{
