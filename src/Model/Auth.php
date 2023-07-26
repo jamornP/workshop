@@ -49,7 +49,8 @@ class Auth extends DbWorkshop {
                 s_school,
                 s_tel,
                 s_email,
-                s_password
+                s_password,
+                role
                 
             ) VALUES (
                 :ti_id,
@@ -58,7 +59,8 @@ class Auth extends DbWorkshop {
                 :s_school,
                 :s_tel,
                 :s_email,
-                :s_password
+                :s_password,
+                :role
             )
             ";
             $stmt = $this->pdo->prepare($sql);

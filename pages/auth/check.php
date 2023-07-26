@@ -12,6 +12,7 @@ if (isset($_POST['add'])) {
   $data['s_surname'] = $_POST['surname'];
   $data['s_school'] = $_POST['school'];
   $data['s_tel'] = $_POST['tel'];
+  $data['role'] = "student";
   print_r($data);
   $ck = $authObj->addUser($data);
   if ($ck) {
