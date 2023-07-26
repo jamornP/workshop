@@ -52,4 +52,21 @@ class Data extends DbWorkshop {
         $data = $stmt->fetchAll();
         return $data[0]['ti_id'];
     }
+    // รววม
+    public function dataWorkshop(){
+        $sql = "
+            select s.s_email,t.ti_name,s.s_name,s.s_surname,w.w_name, wd.wd_date,wd.wd_time_start,wd.wd_time_end,wd.wd_round,d.d_name,wd.wd_address,wd.wd_amount
+            from tb_student as s
+            LEFT JOIN tb_title as t ON t.ti_id = s.ti_id
+            LEFT JOIN tb_staff as st ON st.s_id = s.s_id
+            LEFT JOIN tb_workshop as w ON w.w_id = st.w_id
+            LEFT JOIN tb_workshop_data as wd ON wd.w_id = st.w_id
+            LEFT JOIN tb_department as d ON d.d_id = wd.d_id
+            WHERE s.role = 'staff'
+        ";
+        $stmt = $this->pdo->query($sql);
+        $data = $stmt->fetchAll();
+        return $data;
+        
+    }
 }
