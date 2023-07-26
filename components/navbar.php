@@ -30,7 +30,7 @@ $dataObj = new Data;
             if($_SESSION['role']=="student"){
               echo "
                 <li class='nav-item'>
-                  <a class='nav-link ' aria-current='page' href='/workshop/pages/student'>QR Code</a>
+                  <a class='nav-link active' aria-current='page' href='/workshop/pages/student'>QR Code</a>
                 </li>
               ";
             }
