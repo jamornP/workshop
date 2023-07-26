@@ -43,6 +43,8 @@ if(isset($_POST['check'])){
             header('Location: /workshop/pages/student');
             exit();
           }
+        }else{
+          echo "ไม่มี role";
         }
        
     }else{
