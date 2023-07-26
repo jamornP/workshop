@@ -19,7 +19,7 @@
             </div>
             <div class="col-lg-3" style="text-align: center;">
                 <img src="/workshop/images/qr/qrm.png"><br>
-                <a href="#">หรือคลิกลิ้งค์</a>
+                <a class="btn btn-success text-white mt-2"href="#">หรือคลิกที่นี้</a>
             </div>
         </div>
 
