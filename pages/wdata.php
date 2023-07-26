@@ -12,38 +12,46 @@
   <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/components/navbar.php"; ?>
   <div class="container mt-3">
     <div class="card">
-      <div class="card-head mt-3">
+      <div class="mt-3">
 
         <?php
         $workshop = $dataObj->getWorkshop("data");
-        // print_r($data);
         foreach ($workshop as $a) {
           echo "<h2 class='text-center'>{$a['w_name']}</h2>";
+          $dataworkshop = $dataObj->getWorkshopDataById("data", $a['w_id']);
+          //print_r($dataworkshop);
+          echo "
+          <table class='table table-striped table-hover text-center border'>
+          <thead>
+            <tr class='bg-242'>
+              <th scope='col'>รอบที่</th>
+              <th scope='col'>เวลา</th>
+              <th scope='col'>สถานที่</th>
+              <th scope='col'>จำนวนรับ/มา</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+          ";
+          foreach ($dataworkshop as $b) {
+            $time = $b['wd_time_start'] . " - " . $b['wd_time_end'];
 
+            echo "<tr>
+            <td scope='row' class='text-center col-2'>{$b['wd_round']}</td>
+            <td class='text-center col-2'>{$time}</td>
+            <td class='text-center col-6'>{$b['wd_address']}</td>
+            <td class='text-center col-2'>{$b['wd_amount']}</td>
+          </tr>";
+          }
+          echo "
+          </tbody>
+        </table>
+          ";
         }
         ?>
 
       </div>
-      <div class="card-body">
-        <table class="table table-striped table-hover">
-          <thead class="text-center">
-            <tr>
-              <th scope="col">รอบที่</th>
-              <th scope="col" style="border-left: 1px solid; border-right: 1px solid;">เวลา</th>
-              <th scope="col" style="border-right: 1px solid;">จำนวนรับ</th>
-              <th scope="col">จำนวนที่มา</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td scope="row" class="text-center col-3">1</td>
-              <td style="border-left: 1px solid;border-right: 1px solid;">Mark</td>
-              <td class="text-center col-3" style="border-right: 1px solid;"><a hrf="#">20</a></td>
-              <td class="text-center col-3"><a hrf="#">10</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+
     </div>
   </div>
 
