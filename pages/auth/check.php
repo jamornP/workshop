@@ -40,7 +40,7 @@ if(isset($_POST['check'])){
             header('Location: /workshop/pages/staff/index.php');
             exit();
           }else{
-            header('Location: /workshop/pages/index.php');
+            header('Location: /workshop/pages/student');
             exit();
           }
         }

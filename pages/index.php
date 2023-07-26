@@ -33,13 +33,13 @@
                         <div class='col-lg-4'>
                             <img src='/workshop/images/{$w['w_img']}' class='img-thumbnail'>
                             <div class='row mt-1'>
-                                <div class='col-lg-6'>
+                                <div class='col-lg-6 text-center'>
                                     <p>{$w['w_detail']}</p>
                                     <a href='{$w['w_link']}'>***
                                         คลิกลงทะเบียน ***</a>
                                     
                                 </div>
-                                <div class='col-lg-6'>
+                                <div class='col-lg-6 text-center'>
                                     <img src='/workshop/images/qr/{$w['w_qrcode']}' class='img-thumbnail qropen'>
                                     <p class='text-center'>QR Code Open chat</p>
                                 </div>
