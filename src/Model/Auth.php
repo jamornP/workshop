@@ -27,7 +27,7 @@ class Auth extends DbWorkshop {
             $_SESSION['login'] = true;
             $_SESSION['fullname'] = $userDB['title']."".$userDB['s_name']." ".$userDB['s_surname'];
             $dataUser['role'] = $userDB['role'];
-
+            $dataUser['login'] = true;
             return $dataUser;
         } else {
             $dataUser['login'] = false;

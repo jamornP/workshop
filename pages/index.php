@@ -48,51 +48,7 @@
                         ";
                     }
                 ?>
-                <!-- <div class="col-lg-4">
-                    <img src="/workshop/images/b1.png" class="img-thumbnail">
-                    <div class="row mt-1">
-                        <div class="col-lg-6">
-                            <p>สำหรับ นักเรียนมัธยมศึกษา จำนวน 90 คน/รอบ</p>
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSds_kGCQXM3dEjoPsGfiHElKW1qB8X-R7yY8G-h_wzAWAV4dg/viewform">***
-                                คลิกลงทะเบียน ***</a>
-                            
-                        </div>
-                        <div class="col-lg-6">
-                            <img src="/workshop/images/qr/qrm.png" class="img-thumbnail qropen">
-                            <p class="text-center">QR Code Open chat</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <img src="/workshop/images/b2.png" class="img-thumbnail">
-                    <div class="row mt-1">
-                        <div class="col-lg-6">
-                            <p>สำหรับ นักเรียนมัธยมศึกษา จำนวน 90 คน/รอบ</p>
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSds_kGCQXM3dEjoPsGfiHElKW1qB8X-R7yY8G-h_wzAWAV4dg/viewform">***
-                                คลิกลงทะเบียน ***</a>
-                            
-                        </div>
-                        <div class="col-lg-6">
-                            <img src="/workshop/images/qr/qrm.png" class="img-thumbnail qropen">
-                            <p class="text-center">QR Code Open chat</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <img src="/workshop/images/1-f.png" class="img-thumbnail">
-                    <div class="row mt-1">
-                        <div class="col-lg-6">
-                            <p>สำหรับ นักเรียนมัธยมศึกษา จำนวน 90 คน/รอบ</p>
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSds_kGCQXM3dEjoPsGfiHElKW1qB8X-R7yY8G-h_wzAWAV4dg/viewform">***
-                                คลิกลงทะเบียน ***</a>
-                            
-                        </div>
-                        <div class="col-lg-6">
-                            <img src="/workshop/images/qr/qrm.png" class="img-thumbnail qropen">
-                            <p class="text-center">QR Code Open chat</p>
-                        </div>
-                    </div>
-                </div> -->
+               
             </div>
         </div>
     </div>
