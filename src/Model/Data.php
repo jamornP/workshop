@@ -69,4 +69,19 @@ class Data extends DbWorkshop {
         return $data;
         
     }
+    // workshop data
+    public function getWorkshopDataById($action,$w_id){
+        $sql = "
+            SELECT *
+            FROM tb_workshop_data
+            WHERE w_id = {$w_id}
+        ";
+        $stmt = $this->pdo->query($sql);
+        $data = $stmt->fetchAll();
+        if($action=="count"){
+            return count($data);
+        }else{
+            return $data;
+        }
+    }
 }
