@@ -12,8 +12,9 @@
   <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/components/navbar.php"; ?>
   <?php
   if ($_SESSION['role'] == 'admin' OR $_SESSION['role'] == 'staff') {
-    $time = date("H:i:s");
-    $dataW = $dataObj->dataWorkshopBySIdDate("data", $_SESSION['s_id'], "2023-08-04", "08:30:00");
+    $dateN = date("Y-m-d");
+    $timeN = date("H:i:s");
+    $dataW = $dataObj->dataWorkshopBySIdDate("data", $_SESSION['s_id'], $dateN, $timeN);
     // echo "<pre>";
     // print_r($dataW);
     // echo "</pre>";
