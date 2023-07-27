@@ -1,4 +1,5 @@
 <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/vendor/autoload.php"; ?>
+<?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/function/function.php"; ?>
 <?php
    session_start();
    date_default_timezone_set('Asia/Bangkok');

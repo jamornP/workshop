@@ -12,7 +12,7 @@
   <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/components/navbar.php"; ?>
   <?php
     $time = date("H:i:s");
-    $dataW = $dataObj->dataWorkshopBySIdDate("data", $_SESSION['s_id'],"2023-08-04","10:00:00");
+    $dataW = $dataObj->dataWorkshopBySIdDate("data", $_SESSION['s_id'],"2023-08-04","08:30:00");
     // echo "<pre>";
     // print_r($dataW);
     // echo "</pre>";
@@ -20,7 +20,7 @@
       foreach($dataW as $w){
         $countWS = $dataObj->getDataByWId("count",$w['wd_id']);
         $w_name = $w['w_name'];
-        $round = $w['wd_round']." เวลา ".$w['wd_time_start']." - ".$w['wd_time_end'];
+        $round = $w['wd_round']." เวลา ".time_sort($w['wd_time_start'])." - ".time_sort($w['wd_time_end']);
         $incom = $w['wd_amount'] - $countWS;
         $department = $w['wd_address'];
         $wd_id = $w['wd_id'];
@@ -131,7 +131,9 @@
             </span>
           </button>
           <div class="mt-2">สถานที่ : <?php echo $dataW['wd_address']?></div>
-          
+          <div class="mt-5">
+            <h4 class="text-center text-danger"><b>ยังไม่เปิดให้ลงทะเบียน</b></h4>
+          </div>
         </div>
 
       </div>

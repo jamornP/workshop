@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="refresh" content="10">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Workshop</title>
   <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/components/link.php"; ?>
@@ -30,8 +31,9 @@
       echo "
           <table class='table table-striped table-hover text-center table-bordered'>
           <thead>
-            <tr class='bg-212'>
+            <tr class='table-warning'>
               <th scope='col'>รอบที่</th>
+              <th scope='col'>วันที่</th>
               <th scope='col'>เวลา</th>
               <th scope='col'>สถานที่</th>
               <th scope='col'>จำนวนรับ/มา</th>
@@ -41,16 +43,23 @@
           <tbody>
           ";
       foreach ($dataworkshop as $b) {
-        $time = $b['wd_time_start'] . " - " . $b['wd_time_end'];
+        $time = time_sort($b['wd_time_start']) . " - " . time_sort($b['wd_time_end']);
+        $date = datethai($b['wd_date']);
         $countData = $dataObj->getDataByWId("count",$b['wd_id']);
+        if($b['wd_amount']>$countData ){
+          $color = "text-success";
+        }else{
+          $color = "text-danger";
+        }
         // echo "<pre>";
         // print_r($countData);
         // echo"</pre>";
         echo "<tr>
-            <td scope='row' class='text-center col-2'>{$b['wd_round']}</td>
+            <td scope='row' class='text-center col-1'>{$b['wd_round']}</td>
+            <td class='text-center col-2'>{$date}</td>
             <td class='text-center col-2'>{$time}</td>
             <td class='text-center col-6'>{$b['wd_address']}</td>
-            <td class='text-center col-2'>{$b['wd_amount']}/{$countData}</td>
+            <td class='text-center col-1 {$color} fs-20'><b>{$b['wd_amount']}/{$countData}</b></td>
           </tr>";
       }
       echo "
