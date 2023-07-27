@@ -1,4 +1,15 @@
 <?php
+    function date_time_thai($fulldate){
+        $da=explode(" ",$fulldate);
+
+        $date=$da[0];
+        $time=$da[1];
+        $da = datethai($date);
+        $ti = time_sort($time);
+        $date_time = $da." ".$ti;
+        return  $date_time;
+
+    }
     function datethai($date){
         $da=explode("-",$date);
 

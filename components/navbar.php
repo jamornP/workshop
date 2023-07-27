@@ -38,6 +38,12 @@ $dataObj = new Data;
                   <a class='nav-link active' aria-current='page' href='/workshop/pages/student'>QR Code</a>
                 </li>
               ";
+            }else{
+              echo "
+              <li class='nav-item'>
+                <a class='nav-link active' aria-current='page' href='/workshop/pages/staff'>ข้อมูลผู้เข้าอบรม</a>
+              </li>
+            ";
             }
             
             echo "
@@ -45,7 +51,7 @@ $dataObj = new Data;
               <a class='nav-link dropdown-toggle text-success' href='#' id='navbarDropdown' role='button'
                 data-bs-toggle='dropdown' aria-expanded='false'>{$_SESSION['fullname']}</a>
               <ul class='dropdown-menu' aria-labelledby='navbarDropdown'>
-                <li><a class='dropdown-item' href='/workshop/pages/staff'>Workshop</a></li>
+                
                 <li><a class='dropdown-item' href='/workshop/pages/auth/logout.php'>ออกจากระบบ</a></li>
               </ul>
             </li>

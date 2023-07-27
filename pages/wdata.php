@@ -17,10 +17,13 @@
     <?php
     $workshop = $dataObj->getWorkshop("data");
     foreach ($workshop as $a) {
+      $dataW = $dataObj->getWorkshopDataById("data",$a['w_id']);
       echo "
             <div class='card mt-2'>
-              <div class='card-header bg-primary'>
-                <h2 class='text-center text-white'>{$a['w_name']}</h2>
+              <div class='card-header bg-primary text-center text-white'>
+                <h3 class='text-white'>{$a['w_name']}</h3>
+                ({$dataW[0]['d_name']})<br>
+                <b class='text-info'>สถานที่ :</b> {$dataW[0]['wd_address']}
               </div>
               <div class='card-body'>
           ";
@@ -35,7 +38,6 @@
               <th scope='col'>รอบที่</th>
               <th scope='col'>วันที่</th>
               <th scope='col'>เวลา</th>
-              <th scope='col'>สถานที่</th>
               <th scope='col'>จำนวนรับ/มา</th>
               
             </tr>
@@ -58,7 +60,6 @@
             <td scope='row' class='text-center col-1'>{$b['wd_round']}</td>
             <td class='text-center col-2'>{$date}</td>
             <td class='text-center col-2'>{$time}</td>
-            <td class='text-center col-6'>{$b['wd_address']}</td>
             <td class='text-center col-1 {$color} fs-20'><b>{$b['wd_amount']}/{$countData}</b></td>
           </tr>";
       }

@@ -19,6 +19,14 @@ class Data extends DbWorkshop {
         $stmt->execute($data);
         return true;
     }
+    public function delData($data){
+        $sql = "
+            DELETE FROM `tb_data` WHERE s_id=:s_id AND wd_id=:wd_id
+        ";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute($data);
+        return true;
+    }
     public function getDataByWId($action,$wd_id)  {
         $sql ="
             SELECT d.data_id,d.data_time,w.w_id,w.w_name,wd.wd_date,wd.wd_time_start,wd.wd_time_end,wd.wd_round,wd.wd_address,wd.wd_amount,t.ti_name,s.s_name,s.s_surname,s.s_id
@@ -58,7 +66,7 @@ class Data extends DbWorkshop {
     public function getWorkshop($action) {
         $sql = "
             SELECT *
-            FROM tb_workshop
+            FROM tb_workshop 
         ";
         $stmt = $this->pdo->query($sql);
         $data = $stmt->fetchAll();
@@ -162,7 +170,8 @@ class Data extends DbWorkshop {
     public function getWorkshopDataById($action,$w_id){
         $sql = "
             SELECT *
-            FROM tb_workshop_data
+            FROM tb_workshop_data as wd
+            LEFT JOIN tb_department as d ON d.d_id = wd.d_id 
             WHERE w_id = {$w_id}
         ";
         $stmt = $this->pdo->query($sql);

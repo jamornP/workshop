@@ -16,3 +16,4 @@
 <link rel="stylesheet" href="/workshop/theme/css/bootstrap-theme.css">
 <link rel="stylesheet" href="/workshop/theme/css/color.css">
 <link rel="stylesheet" href="/workshop/theme/css/toastr.css">
+<link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
