@@ -18,7 +18,7 @@
                 <h4 class="font-sriracha text-white fs-20">"โปรดเก็บรูป QR Code ประจำตัวไว้เพื่อแสดงให้เจ้าหน้าที่แสกนข้อมูลก่อนเข้าห้อง Workshop"</h4>
             </div>
             <div class="col-lg-3" style="text-align: center;">
-                <img src="/workshop/images/qr/Workshop.png" class="img-thumbnail" style="display:table; margin: 0 auto; max-width:200px;">
+                <img src="/workshop/images/qr/qr_workshop.png" class="img-thumbnail" style="display:table; margin: 0 auto; max-width:200px;">
                 <a class="btn btn-success text-white mt-2"href="/workshop/pages/auth/login.php">หรือคลิกที่นี้</a>
             </div>
         </div>
