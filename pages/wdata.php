@@ -42,12 +42,15 @@
           ";
       foreach ($dataworkshop as $b) {
         $time = $b['wd_time_start'] . " - " . $b['wd_time_end'];
-
+        $countData = $dataObj->getDataByWId("count",$b['wd_id']);
+        // echo "<pre>";
+        // print_r($countData);
+        // echo"</pre>";
         echo "<tr>
             <td scope='row' class='text-center col-2'>{$b['wd_round']}</td>
             <td class='text-center col-2'>{$time}</td>
             <td class='text-center col-6'>{$b['wd_address']}</td>
-            <td class='text-center col-2'>{$b['wd_amount']}</td>
+            <td class='text-center col-2'>{$b['wd_amount']}/{$countData}</td>
           </tr>";
       }
       echo "

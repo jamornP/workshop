@@ -1,6 +1,7 @@
 <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/vendor/autoload.php"; ?>
 <?php
    session_start();
+   date_default_timezone_set('Asia/Bangkok');
 use App\Model\Auth;
 
 $authObj = new Auth;
@@ -43,6 +44,7 @@ $dataObj = new Data;
               <a class='nav-link dropdown-toggle text-success' href='#' id='navbarDropdown' role='button'
                 data-bs-toggle='dropdown' aria-expanded='false'>{$_SESSION['fullname']}</a>
               <ul class='dropdown-menu' aria-labelledby='navbarDropdown'>
+                <li><a class='dropdown-item' href='/workshop/pages/staff'>Workshop</a></li>
                 <li><a class='dropdown-item' href='/workshop/pages/auth/logout.php'>ออกจากระบบ</a></li>
               </ul>
             </li>
