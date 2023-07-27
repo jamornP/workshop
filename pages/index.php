@@ -19,7 +19,7 @@
             </div>
             <div class="col-lg-3" style="text-align: center;">
                 <img src="/workshop/images/qr/workshop.png" class="img-thumbnail" style="display:table; margin: 0 auto; max-width:200px;">
-                <a class="btn btn-success text-white mt-2"href="/workshop">หรือคลิกที่นี้</a>
+                <a class="btn btn-success text-white mt-2"href="/workshop/pages/auth/login.php">หรือคลิกที่นี้</a>
             </div>
         </div>
 
