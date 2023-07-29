@@ -89,6 +89,19 @@ class Data extends DbWorkshop {
         $data = $stmt->fetchAll();
         return $data[0];
     }
+    public function getWorkshopBySt2($s_id){
+        $sql = "
+            select w.*,wd.*
+            from tb_student as s
+            LEFT JOIN tb_staff as st ON st.s_id = s.s_id
+            LEFT JOIN tb_workshop as w ON w.w_id = st.w_id
+            LEFT JOIN tb_workshop_data as wd ON wd.w_id = st.w_id
+            WHERE s.s_id = {$s_id}
+        ";
+        $stmt = $this->pdo->query($sql);
+        $data = $stmt->fetchAll();
+        return $data;
+    }
     // title
     public function getTitle(){
         $sql = "
@@ -164,6 +177,21 @@ class Data extends DbWorkshop {
             return $data;
             // return $sql;
         }
+        
+    }
+    public function getSql($s_id,$date,$time){
+        $sql = "
+            select s.s_id,s.s_email,t.ti_name,s.s_name,s.s_surname,w.w_id,w.w_name,wd.wd_id, wd.wd_date,wd.wd_time_start,wd.wd_time_end,wd.wd_round,d.d_name,wd.wd_address,wd.wd_amount
+            from tb_student as s
+            LEFT JOIN tb_title as t ON t.ti_id = s.ti_id
+            LEFT JOIN tb_staff as st ON st.s_id = s.s_id
+            LEFT JOIN tb_workshop as w ON w.w_id = st.w_id
+            LEFT JOIN tb_workshop_data as wd ON wd.w_id = st.w_id
+            LEFT JOIN tb_department as d ON d.d_id = wd.d_id
+            WHERE s.s_id = {$s_id} AND wd.wd_date = '{$date}' AND (ADDTIME('{$time}','00:30:00') BETWEEN wd.wd_time_start AND wd.wd_time_end)
+        ";
+            return $sql;
+            // return $sql;
         
     }
     // workshop data

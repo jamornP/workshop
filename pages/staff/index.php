@@ -14,7 +14,10 @@
   if ($_SESSION['role'] == 'admin' OR $_SESSION['role'] == 'staff') {
     $dateN = date("Y-m-d");
     $timeN = date("H:i:s");
+    // echo $dateN." ".$timeN;
     $dataW = $dataObj->dataWorkshopBySIdDate("data", $_SESSION['s_id'], $dateN, $timeN);
+    // $sql = $dataObj->getSQL($_SESSION['s_id'], $dateN, $timeN);
+    // echo "<br>.$sql";
     // echo "<pre>";
     // print_r($dataW);
     // echo "</pre>";
@@ -76,6 +79,7 @@
               </span>
             </button>
             <div class="mt-2">สถานที่ : <?php echo $department; ?></div>
+            <div id="divtime"></div>
             <table class='table table-bordered'>
               <thead>
                 <tr class='table-success text-center'>
@@ -128,12 +132,30 @@
           <div class="card-body">
             <button type="button" class="btn btn-success position-relative text-white">
               <?php echo $dataW['w_detail']; ?>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                <?php echo $dataW['wd_amount']; ?>
+              <!-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                <?php //echo $dataW['wd_amount']; ?>
                 <span class="visually-hidden"></span>
-              </span>
+              </span> -->
             </button>
+            
             <div class="mt-2">สถานที่ : <?php echo $dataW['wd_address'] ?></div>
+            <div id="divtime"></div>
+            <?php 
+              $dataWD = $dataObj->getWorkshopBySt2($_SESSION['s_id']);
+              foreach($dataWD as $wd){
+                $round = $wd['wd_round'] ." วันที่ ".datethai($wd['wd_date']). " เวลา " . time_sort($wd['wd_time_start']) . " - " . time_sort($wd['wd_time_end']);
+                echo "
+                  <br>
+                  <button type='button' class='btn btn-warning position-relative text-white mt-2'>
+                    {$round}
+                    <span class='position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger'>
+                      {$wd['wd_amount']}
+                      <span class='visually-hidden'></span>
+                    </span>
+                  </button>
+                ";
+              }
+            ?>
             <div class="mt-5">
               <h4 class="text-center text-danger"><b>ยังไม่เปิดให้ลงทะเบียน</b></h4>
             </div>
@@ -147,6 +169,50 @@
   ?>
 
   <?php require $_SERVER['DOCUMENT_ROOT'] . "/workshop/components/script.php"; ?>
+  <script>
+    function showClockRealTime() {
+        var d = new Date();
+        if(d.getHours()<10){
+          var h = "0"+d.getHours();
+        }else{
+          var h = d.getHours();
+        }
+        if(d.getMinutes()<10){
+          var m = "0"+d.getMinutes();
+        }else{
+          var m = d.getMinutes();
+        }
+        if(d.getSeconds()<10){
+          var s = "0"+d.getSeconds();
+        }else{
+          var s = d.getSeconds();
+        }
+        document.getElementById("divtime").innerHTML = "เวลาปัจจุบัน คือ "+h+":"+m+":"+s;
+    }
+    setInterval("showClockRealTime()", 1000);
+  </script>
+      <script>
+        // Command: toastr["success"]("ข้อความ")
+
+        //ตัวนี้จะเอาไว้ set ค่าต่างๆ toastr
+        toastr.options = {
+            "closeButton": true,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "3000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+    </script>
 </body>
 
 </html>
