@@ -210,4 +210,16 @@ class Data extends DbWorkshop {
             return $data;
         }
     }
+    public function getWorkshopDataByTime($w_id,$date,$time){
+        $sql = "
+            SELECT *
+            FROM tb_workshop_data as wd
+            LEFT JOIN tb_department as d ON d.d_id = wd.d_id 
+            WHERE wd.w_id={$w_id} AND wd.wd_date = '{$date}' AND (ADDTIME('{$time}','00:30:00') < wd.wd_time_end) 
+            ORDER BY wd.wd_time_start
+        ";
+        $stmt = $this->pdo->query($sql);
+        $data = $stmt->fetchAll();
+        return $data;
+    }
 }
