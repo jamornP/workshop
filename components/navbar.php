@@ -52,6 +52,7 @@ $dataObj = new Data;
                 data-bs-toggle='dropdown' aria-expanded='false'>{$_SESSION['fullname']}</a>
               <ul class='dropdown-menu' aria-labelledby='navbarDropdown'>
                 
+                <li><a class='dropdown-item' href='/workshop/pages/student/edit.php'>แก้ไขข้อมูล</a></li>
                 <li><a class='dropdown-item' href='/workshop/pages/auth/logout.php'>ออกจากระบบ</a></li>
               </ul>
             </li>

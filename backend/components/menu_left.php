@@ -59,11 +59,27 @@
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="/workshop/backend/pages/workshop" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
                         <p>
                             ข้อมูล Member
+                        </p>
+                    </a>
+                </li> -->
+                <li class="nav-item">
+                    <a href="/workshop/backend/pages/student" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                            ข้อมูล Student
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/workshop/backend/pages/staff" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                            ข้อมูล Staff
                         </p>
                     </a>
                 </li>
@@ -76,7 +92,7 @@
                         </p>
                     </a>
                 </li> -->
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a href="/workshop/backend/pages/from.php" class="nav-link active">
                         <i class="nav-icon fas fa-th"></i>
                         <p>
@@ -102,7 +118,7 @@
                             <span class="right badge badge-danger">New</span>
                         </p>
                     </a>
-                </li>
+                </li> -->
                 <!-- <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>

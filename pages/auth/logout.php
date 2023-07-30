@@ -3,6 +3,6 @@ session_start();
 
 $_SESSION=[];
 
-header("location: /workshop/pages");
+header("location: /workshop/pages/auth/login.php");
 
 ?>
