@@ -57,7 +57,7 @@
                             foreach($datas as $w){
                                 $color = "bg-info";
                                 $full = "";
-                                $countStu = $dataObj->getDataByWId("count",$w['w_id']);
+                                $countStu = $dataObj->getDataByWId("count",$w['wd_id']);
                                 // $countStu = 15;
                                 $per = number_format(($countStu * 100 /$w['wd_amount']),0 );
                             
