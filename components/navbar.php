@@ -51,7 +51,13 @@ $dataObj = new Data;
               <a class='nav-link dropdown-toggle text-success' href='#' id='navbarDropdown' role='button'
                 data-bs-toggle='dropdown' aria-expanded='false'>{$_SESSION['fullname']}</a>
               <ul class='dropdown-menu' aria-labelledby='navbarDropdown'>
-                
+              ";
+            if($_SESSION['role']=='admin'){
+              echo "
+                <li><a class='dropdown-item' href='/workshop/backend/pages'>Backend</a></li>
+              ";
+            }
+            echo "
                 <li><a class='dropdown-item' href='/workshop/pages/student/edit.php'>แก้ไขข้อมูล</a></li>
                 <li><a class='dropdown-item' href='/workshop/pages/auth/logout.php'>ออกจากระบบ</a></li>
               </ul>

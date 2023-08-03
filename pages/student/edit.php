@@ -16,7 +16,7 @@
     // print_r($st);
   ?>
   <div class="container mt-3">
-    <div class="card" style="max-width: 50%;margin: 0px auto;">
+    <div class="card" style="max-width: 90%;margin: 0px auto;">
       <div class="card-header">
         <h5>
           แก้ไขข้อมูล (กรุณาระบุข้อมูลชื่อเป็น ภาษาไทย)

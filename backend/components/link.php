@@ -14,7 +14,7 @@
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro+Kanit:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="/workshop/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
@@ -29,3 +29,5 @@
   <link rel="stylesheet" href="/workshop/dist/css/adminlte.min.css">
   <!-- Daterange picker -->
   <link rel="stylesheet" href="/workshop/plugins/daterangepicker/daterangepicker.css">
+
+ 

@@ -1,4 +1,8 @@
-<?php session_start();?>
+<?php 
+session_start();
+if($_SESSION['role']=="admin"){
+
+?>
 <!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4" style="background-color: #1e1e34;">
     <!-- Brand Logo -->
@@ -727,3 +731,4 @@
     </div>
    
 </aside>
+<?php }?>
