@@ -87,6 +87,14 @@ if($_SESSION['role']=="admin"){
                         </p>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a href="/workshop/backend/pages/certificate" class="nav-link">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>
+                            ข้อมูล Certificate
+                        </p>
+                    </a>
+                </li>
                 <!-- <li class="nav-item">
                     <a href="" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>

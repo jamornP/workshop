@@ -76,6 +76,20 @@ class Data extends DbWorkshop {
             return $data;
         }
     }
+    public function getWorkshopAll($action) {
+        $sql = "
+            SELECT  *
+            FROM tb_workshop as w
+            left join tb_workshop_data  as wd on wd.w_id = w.w_id
+        ";
+        $stmt = $this->pdo->query($sql);
+        $data = $stmt->fetchAll();
+        if($action=="count"){
+            return count($data);
+        }else{
+            return $data;
+        }
+    }
     public function getWorkshopBySt($s_id){
         $sql = "
             select w.*,wd.*
